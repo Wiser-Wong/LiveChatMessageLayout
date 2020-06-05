@@ -26,7 +26,7 @@ public class ChatSmoothLayoutManager extends LinearLayoutManager {
 			// 返回：滑过1px时经历的时间(ms)。
 			@Override
             protected float calculateSpeedPerPixel(DisplayMetrics displayMetrics) {
-				return 480f / displayMetrics.densityDpi;
+				return 500f / displayMetrics.densityDpi;
 			}
 		};
 		smoothScroller.setTargetPosition(position);

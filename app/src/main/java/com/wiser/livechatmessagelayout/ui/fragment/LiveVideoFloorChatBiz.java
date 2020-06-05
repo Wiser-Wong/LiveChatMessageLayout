@@ -37,7 +37,7 @@ public class LiveVideoFloorChatBiz {
     public List<LiveChatBean> addData() {
         List<LiveChatBean> models = new ArrayList<>();
         int random = new Random().nextInt(nickNames.length);
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < random; i++) {
             LiveChatBean model = new LiveChatBean();
             model.nickName = nickNames[random];
             model.content = content[random];

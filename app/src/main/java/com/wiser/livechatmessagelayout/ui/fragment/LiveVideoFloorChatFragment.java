@@ -29,9 +29,7 @@ public class LiveVideoFloorChatFragment extends Fragment implements ILiveVideoFl
 
 	private LiveVideoFloorChatBiz biz;
 
-	private int count;
-
-	private long delayMillis = 1000;//延迟时间 进入直播间添加消息和普通消息内容延迟时间要保持一致
+	private long delayMillis = 2000;//延迟时间 进入直播间添加消息和普通消息内容延迟时间要保持一致
 
 	@Nullable
 	@Override
@@ -58,8 +56,6 @@ public class LiveVideoFloorChatFragment extends Fragment implements ILiveVideoFl
 	private Runnable	runnable	= new Runnable() {
 
 		@Override public void run() {
-			count++;
-//			if (count == 10)return;
 			addMessages(biz.addData());
 			//一定要现在添加速度
 			HandlerHelper.mainLooper().execute(runnable, delayMillis);
@@ -69,7 +65,6 @@ public class LiveVideoFloorChatFragment extends Fragment implements ILiveVideoFl
 	private Runnable	runnable1	= new Runnable() {
 
 		@Override public void run() {
-//			if (count == 10) return;
 			addTipMessage(biz.addItem());
 			HandlerHelper.mainLooper().execute(runnable1, delayMillis);
 		}
