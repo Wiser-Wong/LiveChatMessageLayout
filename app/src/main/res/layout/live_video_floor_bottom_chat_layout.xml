@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.wiser.livechatmessagelayout.ui.weight.LiveChatRecycleView
+        android:id="@+id/rlv_chat"
+        android:layout_width="230dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:fadingEdgeLength="40dp"
+        android:layoutAnimation="@anim/live_video_chat_anim"
+        android:requiresFadingEdge="vertical" />
+
+    <TextView
+        android:id="@+id/tv_chat_new_message_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/shape_white_12radius_bg"
+        android:paddingStart="10dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="4dp"
+        android:text="1条新消息"
+        android:textColor="#FFAC2D"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <com.wiser.livechatmessagelayout.ui.weight.LiveChatIntoRoomTipLayout
+        android:id="@+id/layout_into_room_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone" />
+</merge>
