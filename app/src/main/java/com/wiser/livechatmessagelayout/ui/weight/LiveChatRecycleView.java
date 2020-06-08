@@ -106,7 +106,9 @@ public class LiveChatRecycleView extends RecyclerView implements ILiveVideoFloor
                         return;
                     }
                     onChatViewListener.calculateMessageCount(chatBeans.size());
-                    onChatViewListener.showMessageCount(true);
+                    if (!isTouch){
+                        onChatViewListener.showMessageCount(true);
+                    }
                 }
                 return;
             }
@@ -320,6 +322,7 @@ public class LiveChatRecycleView extends RecyclerView implements ILiveVideoFloor
                 if (isScrollBottom() && isHaveCache()){
                     //添加缓存消息
                     addMessages(getCacheList());
+                    scrollNearBottom();
                     // 抬起的时候显示底部进入布局，去掉列表最后一条和进入布局一样的item
                     if (onChatViewListener != null) onChatViewListener.isHideIntoLayout(false);
                 }
